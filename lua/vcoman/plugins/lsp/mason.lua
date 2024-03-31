@@ -26,11 +26,11 @@ mason_lspconfig.setup({
 		"html",
 		"cssls",
 		"tailwindcss",
-		"sumneko_lua",
-    "pyright",
-    "sqlls",
-    "terraformls",
-    "yamlls",
+		-- "sumneko_lua",
+		"pyright",
+		"sqlls",
+		"terraformls",
+		"yamlls",
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true, -- not the same as ensure_installed
@@ -42,7 +42,7 @@ mason_null_ls.setup({
 		"prettier", -- ts/js formatter
 		"stylua", -- lua formatter
 		"eslint_d", -- ts/js linter
-    "tflint", -- tf linter
+		"tflint", -- tf linter
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,

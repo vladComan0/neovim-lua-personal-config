@@ -27,33 +27,33 @@ if not status then
 end
 
 return packer.startup(function(use)
-  use("wbthomason/packer.nvim") -- packer plugin
-  use("bluz71/vim-nightfly-guicolors") -- preferred theme
+	use("wbthomason/packer.nvim") -- packer plugin
+	use("bluz71/vim-nightfly-guicolors") -- preferred theme
 
-  -- tmux & split window navigation
-  use("christoomey/vim-tmux-navigator") -- configure it to work with arrows
-  use("szw/vim-maximizer") -- maximizes and restores current window
-  
-  -- essential plugins
-  use("tpope/vim-surround") -- surrounding manipulation, see documentation
---  use("vim-scripts/ReplaceWithRegister") -- copy tool, not important right now
+	-- tmux & split window navigation
+	use("christoomey/vim-tmux-navigator") -- configure it to work with arrows
+	use("szw/vim-maximizer") -- maximizes and restores current window
 
-  -- lua functions that many plugins use
-  use("nvim-lua/plenary.nvim")
+	-- essential plugins
+	use("tpope/vim-surround") -- surrounding manipulation, see documentation
+	--  use("vim-scripts/ReplaceWithRegister") -- copy tool, not important right now
 
-  -- commenting with gc
-  use("numToStr/Comment.nvim") -- comment plugin gcc
+	-- lua functions that many plugins use
+	use("nvim-lua/plenary.nvim")
 
-  -- file explorer
-  use("nvim-tree/nvim-tree.lua")
-  
-  -- icons
-  use("kyazdani42/nvim-web-devicons") 
+	-- commenting with gc
+	use("numToStr/Comment.nvim") -- comment plugin gcc
 
-  -- statusline
-  use("nvim-lualine/lualine.nvim")
-  
-  -- fuzzy finding w/ telescope
+	-- file explorer
+	use("nvim-tree/nvim-tree.lua")
+
+	-- icons
+	use("kyazdani42/nvim-web-devicons")
+
+	-- statusline
+	use("nvim-lualine/lualine.nvim")
+
+	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
 
@@ -96,10 +96,8 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
-  
-  if packer_bootstrap then
-    require("packer").sync()
-  end
+
+	if packer_bootstrap then
+		require("packer").sync()
+	end
 end)
-
-

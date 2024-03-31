@@ -8,6 +8,7 @@ local keymap = vim.keymap
 
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- remove highlight after searching not working right now
 keymap.set("n", "x", '"_x') -- after deleting, not saving to register
+keymap.set("n", "dd", '"_dd') -- after deleting, not saving to register
 
 keymap.set("n", "<leader>+", "<C-a>") -- increment numbers
 keymap.set("n", "<leader>-", "<C-x>") -- decrement numbers
@@ -28,7 +29,7 @@ keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
- 
+
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
@@ -76,4 +77,3 @@ keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git 
 keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git commits for current file/buffer (use <cr> to checkout) ["gfc" for git file commits]
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
-
